@@ -1,0 +1,8 @@
+# 6A Demo · notes-backend CODEOWNERS
+# 组B(Backend 线)主力仓,由组B 五个专业 Agent + PL Agent 管辖
+# Agent 花名册见 ~/6a-demo-notes/.claude/agents/
+
+*                                @wgj-code
+supabase/migrations/**           @wgj-code
+supabase/functions/**            @wgj-code
+.github/workflows/deploy.yml     @wgj-code

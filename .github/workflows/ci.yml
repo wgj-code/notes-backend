@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  migration-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start local Supabase
+        run: supabase start --exclude studio,imgproxy,edge-runtime,logflare,vector --debug || supabase start
+
+      - name: Apply migrations (dry-run by way of fresh start)
+        run: supabase db reset --no-seed
+
+      - name: Show schema
+        run: supabase db dump --schema public

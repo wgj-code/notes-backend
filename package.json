@@ -1,0 +1,16 @@
+{
+  "name": "notes-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "6A Demo · Notes App Backend (Supabase Edge Functions + SQL migrations)",
+  "scripts": {
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "db:push": "supabase db push",
+    "db:reset": "supabase db reset",
+    "functions:serve": "supabase functions serve hello --no-verify-jwt"
+  },
+  "devDependencies": {
+    "supabase": "^1.200.0"
+  }
+}
