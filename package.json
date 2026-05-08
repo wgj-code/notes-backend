@@ -11,6 +11,7 @@
     "functions:serve": "supabase functions serve hello --no-verify-jwt"
   },
   "devDependencies": {
-    "supabase": "^1.200.0"
+    "supabase": "^1.200.0",
+    "typescript": "~5.3.3"
   }
 }
