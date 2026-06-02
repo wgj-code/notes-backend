@@ -1,0 +1,2 @@
+[functions.logs-ingest]
+verify_jwt = false

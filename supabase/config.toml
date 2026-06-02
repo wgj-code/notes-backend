@@ -34,3 +34,6 @@ enable_signup = true
 enable_signup = true
 double_confirm_changes = true
 enable_confirmations = false
+
+[functions.logs-ingest]
+verify_jwt = false
