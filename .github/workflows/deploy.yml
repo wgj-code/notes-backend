@@ -19,9 +19,10 @@ jobs:
         with:
           version: latest
       - name: Link project
-        run: supabase link --project-ref $SUPABASE_PROJECT_REF
+        run: |
+          supabase link --project-ref "$SUPABASE_PROJECT_REF" --database-url "postgresql://postgres:${SUPABASE_DB_PASSWORD}@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres"
       - name: Push migrations
-        run: supabase db push
+        run: supabase db push --linked
       - name: Deploy functions
         run: |
           supabase functions deploy hello --no-verify-jwt
