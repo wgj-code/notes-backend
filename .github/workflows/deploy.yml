@@ -27,6 +27,7 @@ jobs:
         run: supabase db push --linked
       - name: Deploy functions
         run: |
-          supabase functions deploy hello --no-verify-jwt
-          supabase functions deploy tts --no-verify-jwt
+          # hello/tts 用默认认证，logs-ingest 无 JWT 验证（日志类）
+          supabase functions deploy hello
+          supabase functions deploy tts
           supabase functions deploy logs-ingest --no-verify-jwt
