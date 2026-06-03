@@ -23,4 +23,7 @@ jobs:
       - name: Push migrations
         run: supabase db push
       - name: Deploy functions
-        run: supabase functions deploy hello --no-verify-jwt
+        run: |
+          supabase functions deploy hello --no-verify-jwt
+          supabase functions deploy tts --no-verify-jwt
+          supabase functions deploy logs-ingest --no-verify-jwt
