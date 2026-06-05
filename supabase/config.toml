@@ -37,3 +37,6 @@ enable_confirmations = false
 
 [functions.logs-ingest]
 verify_jwt = false
+
+[functions.voice-notes-generate]
+verify_jwt = false
